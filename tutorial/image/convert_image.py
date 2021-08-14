@@ -1,3 +1,10 @@
+"""
+This code takes a .jpg image and converts it to a .png image.
+- opens from /input/starry_night.jpg
+- displays .jpg image on screen, waits for 's' keypress
+- saves to /input/starry_night.png
+"""
+
 import cv2 as cv
 import sys
 
@@ -15,9 +22,9 @@ def convert_image():
 
     k = cv.waitKey(0)
 
-    if k == ord("s"):
+    if k == ord('s'):
         cv.imwrite(img_output_path, img)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     convert_image()
